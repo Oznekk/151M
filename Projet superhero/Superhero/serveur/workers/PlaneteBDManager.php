@@ -17,7 +17,7 @@
 		/**
 		* Fonction permettant la lecture des coureurs pour une �quipe.
 		* Cette fonction permet de retourner la liste des skieurs se trouvant dans un pays donné
-		* @param int $fkEquipe. Id du pays dans lequel se retrouvent les skieurs
+		* @param int $. Id du pays dans lequel se retrouvent les skieurs
 		* @return liste de Skieur
 		*/
 		public function readCoureurs($fkPays)
