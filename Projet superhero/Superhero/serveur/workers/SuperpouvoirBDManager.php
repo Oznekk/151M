@@ -1,11 +1,11 @@
 <?php 
 	include_once('connexion.php');
-	include_once('beans/Genre.php');
+	include_once('beans/Superpouvoir.php');
         
 	/**
 	* Classe genreBDManager
 	*
-	* Cette classe permet la gestion des genres dans la base de données dans l'exercice de debbugage
+	* Cette classe permet la gestion des superpouvoirs dans la base de données dans l'exercice de debbugage
 	*
 	* @version 1.0
 	* @author maraldik
@@ -17,14 +17,14 @@
 		* Fonction permettant la lecture des genre.
 		* Cette fonction permet de retourner la liste des genre se trouvant dans la liste
 		*
-		* @return liste de Genres
+		* @return liste de Superpouvoirs
 		*/
 		public function readGenre()
 		{
 			$count = 0;
 			$liste = array();
 			$connection = new Connexion();
-			$query = $connection->executeQuery("select * from t_genre order by Nom");
+			$query = $connection->executeQuery("select * from T_Superpouvoir order by Nom");
 			foreach($query as $data){
 				$genre = new Pays($data['PK_genre'], $data['Nom']);
 				$liste[$count++] = $genre;
@@ -39,13 +39,13 @@
 		*/
 		public function getInXML()
 		{
-			$listeGenre = $this->readGenre();
-			$result = '<listeGenre>';
-			for($i=0;$i<sizeof($listeGenre);$i++) 
+			$listeSuperhero = $this->readGenre();
+			$result = '<listeSuperhero>';
+			for($i=0;$i<sizeof($listeSuperhero);$i++) 
 			{
-				$result = $result .$listeGenre[$i]->toXML();
+				$result = $result .$listeSuperhero[$i]->toXML();
 			}
-			$result = $result . '</listeGenre>';
+			$result = $result . '</listeSuperhero>';
 			return $result;
 		}
 	}

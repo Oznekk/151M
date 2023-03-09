@@ -25,9 +25,9 @@
 			$count = 0;
 			$liste = array();
 			$connection = new Connexion();
-			$query = $connection->executeQuery("select * from t_skieur where FK_Pays = " .$fkPays);
+			$query = $connection->executeQuery("select * from T_Planete");
 			foreach($query as $data){
-				$coureur = new Superhero($data['PK_Skieur'], $data['Nom'], $data['PK_Skieur']);
+				$coureur = new Superhero($data['PK_Planete'], $data['Nom'], $data['PK_Planete']);
 				$liste[$count++] = $coureur;
 			}	
 			return $liste;	
@@ -38,15 +38,15 @@
 		* @param int $fkEquipe. Id du pays dans lequel se retrouvent les skieurs
 		* @return String. Liste des skieurs en XML
 		*/
-		public function getInXML($fkSuperheros)
+		public function getInXML()
 		{
-			$listSuperheros = $this->readCoureurs($fkSuperheros);
-			$result = '<listeSkieurs>';
-			for($i=0;$i<sizeof($listSuperheros);$i++) 
+			$listPlanete = $this->readCoureurs();
+			$result = '<listePlanete>';
+			for($i=0;$i<sizeof($listPlanete);$i++) 
 			{
-				$result = $result .$listSuperheros[$i]->toXML();
+				$result = $result .$listPlanete[$i]->toXML();
 			}
-			$result = $result . '</listeSkieurs>';
+			$result = $result . '</listePlanete>';
 			return $result;
 		}
 	}
