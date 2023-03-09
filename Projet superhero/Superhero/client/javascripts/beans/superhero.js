@@ -3,7 +3,7 @@
  *
  * @author Maraldi Kenzo
  * @project Superhero
- * @version 1.0 / 03-03.2023
+ * @version 1.0 / 03-MAR-2023
  */
 
 var Superhero = function() {
@@ -14,8 +14,18 @@ var Superhero = function() {
  * @param String description
  * @returns {undefined}
  */
-Pays.prototype.setNom = function(description) {
+Superhero.prototype.setNom = function(description) {
   this.description = description;
+};
+
+
+/**
+ * Setter pour la nom
+ * @param String nom
+ * @returns {undefined}
+ */
+Superhero.prototype.setNom = function(nom) {
+  this.nom = nom;
 };
 
 /**
@@ -23,7 +33,7 @@ Pays.prototype.setNom = function(description) {
  * @param String nom
  * @returns {undefined}
  */
-Pays.prototype.setPk = function(pk) {
+Superhero.prototype.setPk = function(pk) {
   this.pk = pk;
 };
 
@@ -32,7 +42,7 @@ Pays.prototype.setPk = function(pk) {
  * @returns Le pays en format texte
  * toString() comme on les connait bien
  */
-Pays.prototype.toString = function () {
-  return this.superhero;
+Superhero.prototype.toString = function () {
+  return this.nom;
 };
 

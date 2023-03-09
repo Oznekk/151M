@@ -1,46 +1,46 @@
 /*
- * Bean "Skieur".
+ * Bean "Genre".
  *
- * @author Neuhaus Olivier
- * @project Test sommatif 1 2013
- * @version 1.0 / 13-SEP-2013
+ * @author Maraldi kenzo
+ * @project Superhero
+ * @version 1.0 / 09-MAR-2023
  */
 
 /**
- * Bean Skieur
+ * Bean Genre
  * @returns {Continent}
  */
-var Skieur = function() {
+var Genre = function() {
 };
 
 /**
- * Setter pour le nom du skieur
+ * Setter pour le nom du Genre
  * @param String nom
  */
-Skieur.prototype.setNom = function(nom) {
+Genre.prototype.setNom = function(nom) {
   this.nom = nom;
 };
 
 /**
- * Setter pour la position du skieur
+ * Setter pour la position du Genre
  * @param Integer nom
  */
-Skieur.prototype.setPosition = function(position) {
+Genre.prototype.setPosition = function(position) {
   this.position = position;
 };
 
 /**
- * Retourne le skieur en format texte
- * @returns Le skieur en format texte
+ * Retourne le Genre en format texte
+ * @returns Le Genre en format texte
  */
-Skieur.prototype.toString = function () {
+Genre.prototype.toString = function () {
   return this.nom;
 };
 
 /**
- * Getter pour la position du skieur
- * @returns La position du skieur
+ * Getter pour la position du Genre
+ * @returns La position du Genre
  */
-Skieur.prototype.getPosition = function() {
+Genre.prototype.getPosition = function() {
   return this.position;
 };
