@@ -5,7 +5,7 @@
  * @version 1.0 / 13-SEP-2013
  */
 
-var BASE_URL = "http://localhost/ex9_donnee/serveur/";
+var BASE_URL = "https://cpanel.emf-informatique.ch/cpsess6814343673/3rdparty/phpMyAdmin/db_export.php?db=maraldik_151_Superhero";
 
 /**
  * Fonction permettant de demander la liste des pays au serveur.

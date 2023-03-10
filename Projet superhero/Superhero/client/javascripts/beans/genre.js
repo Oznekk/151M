@@ -21,13 +21,7 @@ Genre.prototype.setNom = function(nom) {
   this.nom = nom;
 };
 
-/**
- * Setter pour la position du Genre
- * @param Integer nom
- */
-Genre.prototype.setPosition = function(position) {
-  this.position = position;
-};
+
 
 /**
  * Retourne le Genre en format texte
